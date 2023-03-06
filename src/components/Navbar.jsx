@@ -40,7 +40,7 @@ const Navbar = () => {
   const [open, setOpen] =useState(false)
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky">
+      <AppBar position="sticky" color='secondary'>
         <StyledToolbar>
             <Typography variant="h7" sx={{display:{xs: "none", sm: "block"}}} >Socially</Typography>
             <AdbIcon sx={{display:{xs: "block", sm: "none"}}} />

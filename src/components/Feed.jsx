@@ -1,5 +1,5 @@
-import React from 'react'
-import {Box} from "@mui/material"
+import React, {useState} from 'react'
+import {Box, Stack} from "@mui/material"
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -20,10 +20,25 @@ import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import Post from './Post';
-
+import Skeleton from '@mui/material/Skeleton';
+import CircularProgress from '@mui/material/CircularProgress';
 const Feed = () => {
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, [3000]);
   return (
-    <Box flex={4} p={{ xs: 0, md: 2 }}>
+    <Box flex={4} p={{ xs: 0,  md: 2 }} >
+      {loading ? (
+          <Stack spacing={1} >
+          {/* <Skeleton variant="text" height={100} />
+          <Skeleton variant="text" height={20} />
+          <Skeleton variant="text" height={20} />
+          <Skeleton variant="rectangular" height={300} /> */}
+          <CircularProgress color="secondary" size="15%" sx={{display:'flex', justifyContent:'center', alignItems:'center', paddingLeft:'50%'}}/>
+        </Stack>
+
+      ) : ( 
     <>
     <Post />
     <Post />
@@ -34,6 +49,7 @@ const Feed = () => {
     <Post />
     <Post />
     </>
+    )}
     </Box>
   )
 }

@@ -23,11 +23,11 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 const Post = () => {
   return (
     <Box flex={4} padding={2}>
-      <Card sx={{margin: 5}}>
+      <Card sx={{margin: 5, boxShadow: 10,  border: 1, borderColor: 'secondary.main', borderWidth: 3}}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            O
           </Avatar>
         }
         action={

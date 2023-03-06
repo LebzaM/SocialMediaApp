@@ -50,7 +50,7 @@ const Add = () => {
     <ThemeProvider theme={darkTheme}>
         <Box bgcolor={"background.default"} color={"text.primary"}>
     <Tooltip title="Post" onClick={(e)=>setOpen(true)}sx={{position: "fixed", bottom: 20,left: { xs: "calc(50% - 25px)", md: 30 },}}>
-      <Fab color="primary" aria-label="add">
+      <Fab color="secondary" aria-label="add">
         <AddIcon />
       </Fab>
     </Tooltip>
@@ -97,8 +97,8 @@ const Add = () => {
             variant="contained"
             aria-label="outlined primary button group"
           >
-            <Button>Post</Button>
-            <Button sx={{ width: "100px" }}>
+            <Button color='secondary'>Post</Button>
+            <Button sx={{ width: "100px" }} color='secondary'>
               <DateRange />
             </Button>
           </ButtonGroup>
